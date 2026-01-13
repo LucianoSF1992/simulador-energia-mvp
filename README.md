@@ -153,7 +153,7 @@ http://localhost:3000
 
 🌐 Deploy
 
-Frontend: Vercel
+Frontend: Vercel (https://simulador-energia-frontend-lx9vgci6s.vercel.app/)
 
 Backend: Railway
 
@@ -195,3 +195,4 @@ Este projeto está sob a licença MIT.
 ⭐ Considerações finais
 
 Este projeto foi desenvolvido com foco em clareza, boas práticas e evolução contínua, representando um sistema real de mercado, não apenas um projeto didático.
+
