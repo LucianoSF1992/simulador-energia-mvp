@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const uploadRoutes = require("./routes/upload.routes");
 
 const app = express();
 
@@ -13,6 +14,7 @@ db.query("SELECT 1")
 
 app.use(cors());
 app.use(express.json());
+app.use("/api", uploadRoutes);
 
 app.get("/", (req, res) => {
   res.json({ status: "API do Simulador de Energia ativa 🚀" });
