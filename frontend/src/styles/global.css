@@ -1,0 +1,79 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e fundo */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* Títulos */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+h2, h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Botões */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Economia destaque */
+.economia {
+  color: #198754;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}

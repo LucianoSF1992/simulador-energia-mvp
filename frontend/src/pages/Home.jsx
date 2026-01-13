@@ -7,12 +7,17 @@ function Home() {
   const [resultado, setResultado] = useState(null);
 
   return (
-    <div style={{ maxWidth: 600, margin: "auto", padding: 16 }}>
+    <div className="container">
       <h1>Simulador de Energia ⚡</h1>
 
       <UploadConta onResultado={setResultado} />
-      <ResultadoSimulacao resultado={resultado} />
-      <GraficoComparativo comparativo={resultado?.comparativo} />
+
+      {resultado && (
+        <>
+          <ResultadoSimulacao resultado={resultado} />
+          <GraficoComparativo comparativo={resultado.comparativo} />
+        </>
+      )}
     </div>
   );
 }

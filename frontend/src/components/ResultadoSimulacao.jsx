@@ -1,9 +1,7 @@
 function ResultadoSimulacao({ resultado }) {
-  if (!resultado) return null;
-
   return (
-    <div>
-      <h2>Resultado da Simulação</h2>
+    <div className="card">
+      <h2>Resultado</h2>
 
       <p><strong>Consumo:</strong> {resultado.consumo_kwh} kWh</p>
       <p><strong>Valor atual:</strong> R$ {resultado.valor_atual}</p>
@@ -15,7 +13,9 @@ function ResultadoSimulacao({ resultado }) {
       </p>
 
       {resultado.economia !== null && (
-        <h3>Economia estimada: R$ {resultado.economia}</h3>
+        <p className="economia">
+          Economia estimada: R$ {resultado.economia}
+        </p>
       )}
     </div>
   );

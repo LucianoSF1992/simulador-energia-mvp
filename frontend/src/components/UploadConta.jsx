@@ -6,7 +6,10 @@ function UploadConta({ onResultado }) {
   const [loading, setLoading] = useState(false);
 
   async function enviarPdf() {
-    if (!arquivo) return alert("Selecione um PDF");
+    if (!arquivo) {
+      alert("Selecione um PDF");
+      return;
+    }
 
     const formData = new FormData();
     formData.append("file", arquivo);
@@ -16,14 +19,15 @@ function UploadConta({ onResultado }) {
       const response = await api.post("/simular-pdf", formData);
       onResultado(response.data);
     } catch (error) {
-      alert("Erro ao processar PDF");
+      alert("Erro ao processar o PDF");
+      console.error(error);
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div>
+    <div className="card">
       <input
         type="file"
         accept="application/pdf"
